@@ -1,0 +1,21 @@
+.emoji {
+	cursor: pointer;
+	transition: all 500ms;
+}
+.emoji:hover .emojiImg {
+	--fill-c: #a3aed1;
+	--stroke-width: 1.75;
+}
+.emoji:has(.emojiInput:checked) .emojiImg {
+	--fill-c: transparent;
+	--stroke-width: 2.2;
+}
+.emojiInput {
+	position: absolute;
+	appearance: none;
+}
+svg.emojiImg {
+	--fill-c: transparent;
+	width: 2.5rem;
+	height: 2.5rem;
+}

@@ -1,0 +1,47 @@
+.wrapper {
+	display: flex;
+	flex-direction: column;
+	gap: calc(min(1.5625rem + 23 * ((100vw - 320px) / (1320 - 320)), 3rem));
+}
+.popupForm {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	gap: 1.5rem;
+}
+
+.emojiesWrapper {
+	align-self: center;
+	display: flex;
+	gap: calc(min(0.625rem + 14 * ((100vw - 320px) / (1320 - 320)), 1.5rem));
+	height: 2.5rem;
+	position: relative;
+}
+.emojiError {
+	position: absolute;
+	left: calc(50% - 5.75rem);
+	top: -40%;
+	font-size: 0.75rem;
+	color: var(--color-9);
+	opacity: 0.9;
+}
+
+.wrapperButtons {
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	gap: 1.25rem;
+}
+
+@media (max-width: 600px) {
+	.popupTitle {
+		max-width: 15.625rem;
+		text-align: center;
+	}
+	.wrapperButtons {
+		justify-content: center;
+	}
+	.cancelButton {
+		display: none;
+	}
+}

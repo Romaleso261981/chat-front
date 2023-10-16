@@ -1,0 +1,7 @@
+.userName {
+	font-size: 1rem;
+	line-height: 1.62;
+	font-weight: 500;
+	color: var(--color-2);
+	max-width: max-content;
+}

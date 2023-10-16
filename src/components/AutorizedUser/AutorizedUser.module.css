@@ -1,0 +1,44 @@
+.wrapper {
+	display: flex;
+	gap: calc(min(0.5rem + 8 * ((100vw - 320px) / (1320 - 320)), 1rem));
+}
+
+.user {
+	width: 100%;
+	cursor: pointer;
+	display: flex;
+	gap: 0.5rem;
+	align-items: center;
+}
+
+.userName {
+	max-width: 9.375rem;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+
+.button {
+	min-width: 2.5rem;
+	max-width: 2.5rem;
+	height: 2.5rem;
+}
+
+svg.userMood {
+	--fill-c: transparent;
+	--color-7: #fffefe;
+	--stroke-width: 1.7;
+}
+
+.exitButton {
+	--exit-fill-c: transparent;
+	--stroke-c: white;
+	cursor: pointer;
+	transition: all var(--hover-transit);
+}
+.exitButton:hover {
+	transform: scale(1.05);
+}
+.exitButton:active {
+	--stroke-c: #ffd600;
+}

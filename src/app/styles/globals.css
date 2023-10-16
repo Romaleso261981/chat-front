@@ -1,0 +1,66 @@
+:root {
+	/* ========================== Colors ========================== */
+	--color-1: #02000a;
+	--color-2: #001966;
+	--color-3: #fffefe;
+
+	--color-4: #ffd600;
+	--color-5: #dee3f3;
+	--color-6: #a3afd1;
+	--color-7: #374b88;
+	--color-8: #f4f6ff;
+
+	--color-9: #b70000;
+
+	/* ========================== Transition ========================== */
+	--transit: 0.3s;
+	--hover-transit: 0.2s;
+}
+
+/* ========== Theme Switcher ========== */
+/* html[data-theme="dark"] {
+	color-scheme: dark;
+	--color-1: #fffefe;
+	--color-2: #a3afd1;
+	--color-3: #13192b;
+
+	--color-4: #ffd600;
+	--color-5: #13192b;
+	--color-6: #a3afd1;
+	--color-7: #374b88;
+	--color-8: #f4f6ff;
+} */
+/* ========== Theme Switcher End ========== */
+
+html {
+	overflow-y: scroll;
+}
+body {
+	color: var(--color-1);
+	background-color: var(--color-3);
+	font-size: 1rem;
+	font-weight: 300;
+	line-height: 1.62;
+
+	display: flex;
+	flex-direction: column;
+
+	overflow-y: scroll;
+	scroll-behavior: smooth;
+}
+body::-webkit-scrollbar {
+	width: 0;
+}
+
+.main {
+	flex: 1 1 auto;
+	display: flex;
+	flex-direction: column;
+}
+
+[class*="Container"] {
+	margin: 0 auto;
+	max-width: 1320px;
+	padding: 0 1.25rem;
+	padding-top: 3.75rem;
+}
