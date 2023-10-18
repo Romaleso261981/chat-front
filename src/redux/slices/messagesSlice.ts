@@ -27,6 +27,7 @@ const messagesSlice = createSlice({
 			state.messages = action.payload ?? []
 		},
 		addMessage: (state, action: PayloadAction<Message>) => {
+			console.log('addMessage', action.payload)
 			state.messages.push(action.payload)
 		},
 		setMessagesLoading: (state, action: PayloadAction<boolean>) => {

@@ -9,6 +9,7 @@ interface Props {}
 
 export function MessagesBlock({}: Props) {
 	const { messages, loading } = useAppSelector(state => state.messages)
+	console.log('messages', messages)
 
 	const messagesEndRef = useRef<HTMLDivElement>(null)
 	const messagesContainerRef = useRef<HTMLDivElement>(null)

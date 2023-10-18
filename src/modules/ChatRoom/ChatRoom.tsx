@@ -3,7 +3,6 @@ import s from './ChatRoom.module.css'
 import { ChatPageTemplate } from '@/components/ChatPageTemplate/ChatPageTemplate'
 import { useEffect } from 'react'
 import { useAppDispatch, useAppSelector } from '@/hooks/redux'
-// import { connectSocket, socket } from '@/api/socket'
 import { Aside } from '@/UI/Aside/Aside'
 import { fetchRooms } from '@/redux/slices/roomsSlice'
 import { addMessage, setMessagesLoading, setMessages, Message } from '@/redux/slices/messagesSlice'
@@ -41,7 +40,9 @@ export function ChatRoom({ id }: Props) {
 				dispatch(setMessages(chatRoom.messages))
 				dispatch(setMessagesLoading(false))
 			})
-			socket.on('receive-message', handleReceiveMessage)
+			socket.on('receive-message', message => {
+				handleReceiveMessage(message)
+			})
 		}
 
 		return () => {
